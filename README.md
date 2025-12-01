@@ -1,78 +1,125 @@
-# MERN Stack Integration Assignment
+📘 MERN Blog Integration Project
+Week 7 – Deployment & CI/CD Assignment
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+-This project is a MERN stack blog application built as part of the Power Learn Project curriculum.
+-The goal of Week 7 is to integrate deployment, CI/CD, and monitoring, while preparing the project for production.
 
-## Assignment Overview
+🚀 Live Demo Links
+Frontend (Render)
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+👉https://mern-stack-integration-happylovesyou-1.onrender.com
 
-## Project Structure
+Backend (Render)
 
-```
-mern-blog/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
-```
+👉 https://mern-stack-backend2-p7fc.onrender.com
 
-## Getting Started
+📌 Project Overview
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+The MERN Blog App allows users to:
+  .Create, read, update, and delete blog posts (CRUD)
+  .Interact with a clean UI built in React
+  .Store and retrieve data from a cloud MongoDB database
+  .Authenticate users (if enabled in your version)
 
-## Files Included
+This version is fully integrated with CI/CD pipelines (GitHub Actions) and deployed on modern platforms.
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
+🛠️ Tech Stack
+Frontend
+ .React
+ .Axios
+ .Vercel Deployment
+Backend
+ .Node.js
+ .Express.js
+ .MongoDB Atlas
+ .Render Deployment
+CI/CD
+ .GitHub Actions
+ .Automated tests (optional)
+ .Automatic deployment on push to main
+Monitoring
+ .Render logs
+ .GitHub Actions workflow logs
 
-## Requirements
+ ⚙️ How to Run the Project Locally
+1️⃣ Clone the Repository
+git clone https://github.com/Happylovesyou/mern-stack-integration-happylovesyou.git
+cd mern-stack-integration-happylovesyou
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+2️⃣ Backend Setup
+cd backend
+npm install
 
-## Submission
+Create a .env file:
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
+PORT=5000
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+Run backend:
+Runs on:
+👉 http://localhost:5000
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
+3️⃣ Frontend Setup
+cd frontend
+npm install
+npm start
 
-## Resources
+Runs on:
+👉 http://localhost:3000
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+🔄 CI/CD Setup (GitHub Actions)
+ -This project includes four GitHub Actions workflows:
+
+✔ Backend CI (backend-ci.yml)
+ .Installs backend dependencies
+ .Runs tests
+ .Ensures backend builds properly
+
+✔ Frontend CI (frontend-ci.yml)
+ .Installs React dependencies
+ .Builds the application
+ .Ensures frontend compiles successfully
+
+✔ Backend CD (backend-cd.yml)
+ .Triggers Render deployment via:
+  RENDER_DEPLOY_HOOK
+
+✔ Frontend CD (frontend-cd.yml)
+ .Deploys React app to Vercel using:
+ VERCEL_TOKEN  
+ VERCEL_PROJECT_ID  
+ VERCEL_ORG_ID
+
+📸 CI/CD Workflow Screenshots
+-Screenshots proving automation are located inside:
+
+They include:
+ .CI running successfully
+ .CD auto-deploying
+ .Render successful deployment
+
+ 🗄️ Folder Structure
+mern-stack-integration-happylovesyou/
+ ├── backend/
+ ├── frontend/
+ ├── .github/workflows/
+ ├── deployment/
+ ├── monitoring/
+ ├── screenshots/
+ └── README.md
+
+🌍 Deployment Summary
+Backend (Render)
+ .Deployed as a Node + Express web service
+ .CI/CD triggers auto deployment after every push to main
+ .Uses Build Hook URL
+
+Frontend (Vercel)
+ .Deployed using GitHub → Vercel integration
+ .CI verifies build
+ .CD publishes automatically using Vercel token
+
+ 👤 Author
+
+Rose Maina
+GitHub: Happylovesyou
